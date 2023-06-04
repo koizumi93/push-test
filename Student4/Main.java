@@ -11,13 +11,13 @@ public class Main {
         Student s3 = new Student("遠藤", "3年生");
         Student s4 = new Student("後藤", "1年生");
 
-        List<Student> Studens = new ArrayList<>();
-        Studens.add(s1);
-        Studens.add(s2);
-        Studens.add(s3);
-        Studens.add(s4);
+        List<Student> Students = new ArrayList<>();
+        Students.add(s1);
+        Students.add(s2);
+        Students.add(s3);
+        Students.add(s4);
 
-        List<String> firstGradeStudentList = Studens.stream().filter(s -> s.getGrade().contains("1年生"))
+        List<String> firstGradeStudentList = Students.stream().filter(s -> s.getGrade().contains("1年生"))
                 .map(s -> s.getName()).collect(Collectors.toList());
         System.out.println(firstGradeStudentList);
 
